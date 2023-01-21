@@ -1,0 +1,42 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "blue";//propiedades
+    pincel.fillRect(0,0,600,400);//funcion
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(0,0,200,400);
+
+    pincel.fillStyle = "white";
+    pincel.fillRect(200,0,200,400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400,0,200,400);
+
+    //selecionamos el color deseado
+    pincel.fillStyle = "blue";
+    //comienza un nuevo camino encima de canvas
+    pincel.beginPath();
+    //le solicitamos que se mueva al centro de la bandera
+    pincel.moveTo(300,200);
+    //dibujar una linea hacia una esquina inferior 
+    pincel.lineTo(200,400);
+    pincel.lineTo(400,400);
+    //rellenar ese grafico con el color definido arriba
+    pincel.fill();
+
+    //circunferencia 
+    pincel.fillStyle = "red";
+    pincel.beginPath();
+    //lugar en X y Y, RADIO, ANGULO INICIAL, ANGULO FINAL 
+    pincel.arc(300,200,50,0,2*3.14);
+    pincel.fill();
+
+
+    //documentacion 2d canvas
+
+
+</script>

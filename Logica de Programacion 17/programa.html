@@ -1,0 +1,33 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    function dibujar(x,y,color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,50);
+        //pincel.strokeStyle = "black";
+        //pincel.strokeRect(x,y,50,50);
+    }
+    var x = 0, y=0,color ="yellow"; 
+
+    while (x<=600) {
+        dibujar(x,y,color);
+        if (y==400) {
+            break;
+        }
+        if (x==600) {
+            y=y+50;
+            x=0-50;
+            if (y==50||y==100||y==150) {
+              color="yellow";  
+            }else if (y==200||y==250) {
+              color="blue";  
+            }else if (y==300|| y==350||y==400) {
+              color="red";  
+            }
+        }
+        x = x + 50;
+    }
+</script>

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<h1>TABLA DE MULTIPLICAR</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+    var Numero = parseInt(prompt("Digite el numero"));
+    var NumeroFinal = parseInt(prompt("Digite hasta que numero"));
+
+    //contador =1;
+    //while (contador<=NumeroFinal) {
+    //  imprimir(Numero + " X " + contador + " = "+Numero*contador);
+    //contador++;  
+    //}
+
+    for (var i =1;i<=NumeroFinal; i++) {
+        imprimir(Numero + " X " + i + " = "+Numero*i); 
+    }
+
+
+
+
+
+
+    </script>

@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINAR</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+    var numeroPensado = Math.round(Math.random()*10);
+	var intentos = parseInt(prompt("Digite el numero de intentos posibles"));
+    var numeroLanzado = parseInt(prompt("Digite un numero entre 0 - 10"));
+	
+	var contador =1;
+	while(contador<=intentos){
+		if (numeroPensado == numeroLanzado) {
+				imprimir("Usted acertó"); 
+				break;   
+			}else {
+				alert("El numero es incorrecto")
+				numeroLanzado = parseInt(prompt("Digite un numero entre 0 - 10"));
+    		}
+		contador++;
+	}
+	if (numeroPensado!=numeroLanzado){
+		imprimir("Usted perdio el numero pensado era "+ numeroPensado);
+	}
+  
+
+
+
+
+</script>
+

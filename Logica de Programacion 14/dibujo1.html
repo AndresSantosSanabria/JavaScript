@@ -1,0 +1,56 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "blue";//propiedades
+    pincel.fillRect(0,0,600,400);//funcion
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(0,300,600,400);
+
+    //selecionamos el color deseado
+    pincel.fillStyle = "black";
+    //comienza un nuevo camino encima de canvas
+    pincel.beginPath();
+    //le solicitamos que se mueva al centro de la bandera
+    pincel.moveTo(300,200);
+    //dibujar una linea hacia una esquina inferior 
+    pincel.lineTo(270,400);
+    pincel.lineTo(330,400);
+    //rellenar ese grafico con el color definido arriba
+    pincel.fill();
+
+    //circunferencia 
+    pincel.fillStyle = "salmon";
+    pincel.beginPath();
+    //lugar en X y Y, RADIO, ANGULO INICIAL, ANGULO FINAL 
+    pincel.arc(300,200,40,0,2*3.14);
+    pincel.fill();
+    //____________________________________________________
+    //circunferencia 
+    pincel.fillStyle = "black";
+    pincel.beginPath();
+    //lugar en X y Y, RADIO, ANGULO INICIAL, ANGULO FINAL 
+    pincel.arc(300,200,40,9,2*3.14);
+    pincel.fill();
+    //____________________________________________________
+    //circunferencia 
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    //lugar en X y Y, RADIO, ANGULO INICIAL, ANGULO FINAL 
+    pincel.arc(329,209,3,0,2*3.14);
+    pincel.fill();
+    //____________________________________________________
+    //circunferencia 
+    pincel.fillStyle = "yellow";
+    pincel.beginPath();
+    //lugar en X y Y, RADIO, ANGULO INICIAL, ANGULO FINAL 
+    pincel.arc(540,50,100,0,2*3.14);
+    pincel.fill();
+
+    //documentacion 2d canvas
+
+
+</script>
